@@ -31,9 +31,9 @@ static const char unknown_str[] = "n/a";
  * hostname            hostname                        NULL
  * ipv4                IPv4 address                    interface name (eth0)
  * ipv6                IPv6 address                    interface name (eth0)
- * kernel_release      `uname -r`                      NULL * keyboard_indicators caps/num lock indicators        format string (c?n?)
- *                                                     see keyboard_indicators.c
- * keymap              layout (variant) of current     NULL
+ * kernel_release      `uname -r`                      NULL *
+ * keyboard_indicators caps/num lock indicators        format string (c?n?) see
+ * keyboard_indicators.c keymap              layout (variant) of current NULL
  *                     keymap
  * load_avg            load average                    NULL
  * netspeed_rx         receive network speed           interface name (wlan0)
@@ -63,15 +63,14 @@ static const char unknown_str[] = "n/a";
  * wifi_perc           WiFi signal in percent          interface name (wlan0)
  */
 static const struct arg args[] = {
-	/* function format          argument */
-    	{ wifi_perc, "[󰢽 %s] " , "wlp4s0"},
-	{ wifi_essid, "[󰤨 %s] ", "wlp4s0"},
-	{ vol_perc, "[  %s] ", "/dev/mixer1"},
-        { netspeed_rx , "[NET %s] ", "wlp4s0" }, 
-        { ram_perc, "[RAM %s] " , NULL },
-	{ battery_state, "[CH %s] ", "BAT1" },
-       	{ battery_perc, "[󰂀 %s%%] ", "BAT1" },
-	{ datetime, "[ %s",  "%b %d (%a) %Y ] [  %r]" },
-	  
+    /* function format          argument */
+    {wifi_perc, "[󰢽 %s] ", "wlp4s0"},
+    {wifi_essid, "[󰤨 %s] ", "wlp4s0"},
+    {vol_perc, "[  %s] ", "/dev/mixer"},
+    {netspeed_rx, "[NET %s] ", "wlp4s0"},
+    {ram_perc, "[RAM %s] ", NULL},
+    {battery_state, "[CH %s] ", "BAT1"},
+    {battery_perc, "[󰂀 %s%%] ", "BAT1"},
+    {datetime, "[ %s", "%b %d (%a) %Y ] [  %r]"},
 
 };
